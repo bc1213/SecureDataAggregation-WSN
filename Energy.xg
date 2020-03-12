@@ -1,0 +1,5 @@
+Markers: true
+BoundBox: true
+Background: grey
+Ticks: true
+NoLines: false

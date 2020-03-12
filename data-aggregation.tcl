@@ -1,0 +1,5 @@
+$ns at 7.91 "$ns trace-annotate \"cluster head 7 avg temperature data is 38.7333\""
+$ns at 7.935 "$ns trace-annotate \"cluster head 15 avg temperature data is 53.4333\""
+$ns at 7.96 "$ns trace-annotate \"cluster head 23 avg temperature data is 58.3667\""
+$ns at 7.985 "$ns trace-annotate \"cluster head 31 avg temperature data is 58.7667\""
+$ns at 8.01 "$ns trace-annotate \"cluster head 39 avg temperature data is 63.0333\""
