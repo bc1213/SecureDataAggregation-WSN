@@ -1,0 +1,69 @@
+Install NS2
+===========
+
+Download NS-2.35 (http://sourceforge.net/projects/nsnam/files/allinone/ns-allinone-2.35/ns-allinone-2.35.tar.gz/download)
+
+sudo apt-get install build-essential autoconf automake libxmu-dev
+sudo apt-get install xorg-dev g++ xgraph
+
+
+
+tar zxvf ns-allinone-2.35.tar.gz
+cd ns-allinone-2.35
+
+./install
+
+
+set path
+=========
+
+type
+ gedit ~/.bashrc
+
+type the following contents in end of file .bashrc
+ ns:		/home/bharath/ns-allinone-2.35/ns-2.35/ns
+nam:	/home/bharath/ns-allinone-2.35/nam-1.15/nam
+xgraph:	/home/bharath/ns-allinone-2.35/xgraph-12.2
+gt-itm:   /home/bharath/ns-allinone-2.35/itm, edriver, sgb2alt, sgb2ns, sgb2comns, sgb2hierns
+
+----------------------------------------------------------------------------------
+
+Please put /home/bharath/ns-allinone-2.35/bin:/home/bharath/ns-allinone-2.35/tcl8.5.10/unix:/home/bharath/ns-allinone-2.35/tk8.5.10/unix
+into your PATH environment; so that you'll be able to run itm/tclsh/wish/xgraph.
+
+IMPORTANT NOTICES:
+
+(1) You MUST put /home/bharath/ns-allinone-2.35/otcl-1.14, /home/bharath/ns-allinone-2.35/lib, 
+    into your LD_LIBRARY_PATH environment variable.
+    If it complains about X libraries, add path to your X libraries 
+    into LD_LIBRARY_PATH.
+    If you are using csh, you can set it like:
+		setenv LD_LIBRARY_PATH <paths>
+    If you are using sh, you can set it like:
+		export LD_LIBRARY_PATH=<paths>
+
+(2) You MUST put /home/bharath/ns-allinone-2.35/tcl8.5.10/library into your TCL_LIBRARY environmental
+    variable. Otherwise ns/nam will complain during startup.
+
+
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/dell/ns-allinone-2.35/otcl-1.14:/home/dell/ns-allinone-2.35/lib
+export TCL_LIBRARY=$TCL_LIBRARY:/home/dell/ns-allinone-2.35/tcl8.5.10/library
+XGRAPH=/home/dell/ns-allinone-2.35/bin:/home/dell/ns-allinone-2.35/tcl8.5.10/unix:/home/dell/ns-allinone-2.35/tk8.5.10/unix
+NS=/home/dell/ns-allinone-2.35/ns-2.35/
+NAM=/home/dell/ns-allinone-2.35/nam-1.15/
+export PATH=$PATH:$XGRAPH:$NS:$NAM 
+
+GT-ITM=/home/bharath/ns-allinone-2.35/itm, edriver, sgb2alt, sgb2ns, sgb2comns, sgb2hierns
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/bharath/ns-allinone-2.35/otcl-1.14:/home/bharath/ns-allinone-2.35/lib
+export TCL_LIBRARY=$TCL_LIBRARY:/home/bharath/ns-allinone-2.35/tcl8.5.10/library
+NS=/home/bharath/ns-allinone-2.35/ns-2.35/ns
+NAM=/home/bharath/ns-allinone-2.35/nam-1.15/nam
+XGRAPH=/home/bharath/ns-allinone-2.35/xgraph-12.2
+export PATH=$PATH:$XGRAPH:$NS:$NAM
+================================
+in terminal type
+source .bashrc
+
+./validate
+
